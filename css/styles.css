@@ -123,9 +123,10 @@ p {
 }
 .section {
   position: relative;
-  top: 90%;
+  top: 80%;
   height: 420px;
   background: #EFEFEF;
+  border: 2px dotted red;
 }
 .text {
   position: absolute;
@@ -152,6 +153,8 @@ p {
 }
 .section-img img {
   max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
 }
 .section a {
   color: #E4002B;
@@ -183,6 +186,25 @@ p {
 }
 .events .small-text {
   left: 20%;
+}
+.space {
+  text-align: center;
+  border-bottom: 5px solid #E4002B;
+  background-image: url(../img/spaceshuttle.jpg);
+  background-size: cover;
+  background-position: center;
+}
+.space .text  {
+  left:50%;
+  transform: translate(-50%,0);
+  color: #fff;
+}
+.space .btn-feature {
+  background-color: #fff;
+  color: #8C8C8C;
+}
+.space h2, .space p  {
+  color: #fff;
 }
 @media screen and (max-width: 992px) {
   .section-img {
