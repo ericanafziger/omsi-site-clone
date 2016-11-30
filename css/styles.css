@@ -13,7 +13,14 @@ p {
   font-size: 1.3em;
   font-weight: 200;
 }
+.fixed {
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+}
 .navbar{
+  margin-bottom: 0;
+  height: 100px;
   background-color: #FFF;
   padding: 1% 2% 0 2%;
 }
@@ -34,10 +41,11 @@ p {
   width: 100%;
   display: block;
   object-fit: cover;
-  z-index: -1;
+  z-index: 0;
 }
 .large-text {
   position: absolute;
+  z-index: 1;
   top: 40%;
   left: 50%;
   font-size: 4em;
@@ -86,7 +94,7 @@ p {
 }
 .gingerbread video {
   position: relative;
-  height: 50px;
+  height: 100%;
   width: 100%;
   object-fit: cover;
   z-index: -2;
@@ -102,44 +110,105 @@ p {
 .gingerbread-text {
   position: absolute;
   top: 30%;
-  left: 20%;
+  left: 10%;
 }
 
 .gingerbread-img {
   position: absolute;
   top: 0%;
-  right: 10%;
+  left: 60%;
 }
 .container-fluid {
   margin-top: 40px;
 }
-.attractions {
+.section {
   position: relative;
   top: 90%;
   height: 420px;
   background: #EFEFEF;
 }
-.attractions-text {
+.text {
   position: absolute;
   top: 20%;
-  left: 20%;
+  left: 10%;
+  z-index: 2;
   text-align: center;
 }
-.attractions-small-text {
+.small-text {
   position: absolute;
   bottom: 8%;
-  left: 32%;
+  left: 25%;
+  z-index: 2;
   text-align: right;
 }
-.attractions-small-text p {
+.small-text p {
   font-size: 1em;
 }
-.attractions-img {
+.section-img {
   position: absolute;
-  top: 0%;
-  right: 10%;
+  bottom: 0;
+  left: 55%;
   text-align: center;
 }
-.attractions a {
+.section-img img {
+  max-width: 100%;
+}
+.section a {
   color: #E4002B;
+}
+
+.theater {
+  background-color: #F6F6F6;
+}
+.theater .text {
+  left: 60%;
+}
+.theater .section-img img {
+  width: 500px;
+}
+.theater .section-img {
+  left: 5%;
+}
+.theater .small-text {
+  left: 55%;
+  text-align: left;
+}
+.section .btn-feature {
+  background-color: #C8C8C8;
+  color: #fff;
+  z-index: 2;
+}
+.events .section-img img {
+  width: 450px;
+}
+.events .small-text {
+  left: 20%;
+}
+@media screen and (max-width: 992px) {
+  .section-img {
+    left: 50%;
+    top: 41.5%;
+    transform: translate(-50%,0);
+  }
+  .theater {
+    background: #EFEFEF;
+  }
+  .text {
+    right: 5%;
+  }
+  .theater .text {
+    left: 5%;
+  }
+  .theater .section-img {
+    left: 50%;
+    top: 41.5%;
+    transform: translate(-50%,0);
+  }
+  .section-img img {
+    width: 300px;
+  }
+  .small-text {
+    display: none;
+  }
+
 }
