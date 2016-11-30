@@ -140,7 +140,6 @@ p {
   top: 30%;
   left: 10%;
 }
-
 .gingerbread-img {
   position: absolute;
   top: 0%;
@@ -155,6 +154,14 @@ p {
   height: 100%;
   margin-right: auto;
   margin-left: auto;
+  width: 1084px;
+}
+.max-width-gingerbread {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  left: 50%;
+  transform: translate(-50%,0);
   width: 1084px;
 }
 
@@ -246,6 +253,20 @@ p {
 @media screen and (max-width: 992px) {
   .max-width {
     position: static;
+  }
+  .max-width-gingerbread {
+    width: 100%;
+  }
+  .gingerbread-text {
+    width: 100%;
+    left: 50%;
+    transform: translate(-50%,0);
+  }
+  .gingerbread-img {
+    left: 50%;
+    transform: translate(-50%,0);
+    z-index: -1;
+    opacity: 0.3;
   }
   .large-text {
     font-size: 5.6vw;
