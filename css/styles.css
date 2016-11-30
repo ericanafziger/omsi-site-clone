@@ -18,6 +18,29 @@ p {
   width: 100%;
   z-index: 100;
 }
+.nav a {
+  color: #898989;
+  text-align: center;
+  font-size: 1.15em;
+  font-weight: 200;
+  padding-top: 0;
+  line-height: 2em;
+  vertical-align: middle;
+}
+.nav a:hover {
+  color: red;
+}
+.nav>li>a:hover, .nav>li>a:focus {
+    background-color: transparent;
+}
+.bold {
+  font-weight: 500;
+}
+.large {
+  font-size: 1.5em;
+  vertical-align: middle;
+  margin-top: -18px;
+}
 .navbar{
   margin-bottom: 0;
   height: 100px;
@@ -54,6 +77,7 @@ p {
   color: white;
   font-weight: 300;
 }
+
 .full-size-img form {
   border-radius: 10px;
   text-align: center;
@@ -78,7 +102,11 @@ p {
   color: white;
 }
 .full-size-img select {
+  color: #898989;
   width: 30%;
+  font-weight: 300;
+  text-align: center;
+  text-align-last: center;
   height: 55px;
   font-size: 1em;
   border-radius: 20px;
@@ -121,12 +149,21 @@ p {
 .container-fluid {
   margin-top: 40px;
 }
+.max-width {
+  position: relative;
+  padding: 100px;
+  height: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  width: 1084px;
+}
+
 .section {
   position: relative;
   top: 80%;
   height: 420px;
   background: #EFEFEF;
-  border: 2px dotted red;
+  /*border: 2px dotted red;*/
 }
 .text {
   position: absolute;
@@ -189,7 +226,7 @@ p {
 }
 .space {
   text-align: center;
-  border-bottom: 5px solid #E4002B;
+  border-bottom: 7px solid #E4002B;
   background-image: url(../img/spaceshuttle.jpg);
   background-size: cover;
   background-position: center;
@@ -207,9 +244,31 @@ p {
   color: #fff;
 }
 @media screen and (max-width: 992px) {
+  .max-width {
+    position: static;
+  }
+  .large-text {
+    font-size: 5.6vw;
+    top: 35%;
+  }
+  .full-size-img form {
+    width: 80vw;
+    top: 45%;
+  }
+  .btn-omsi {
+    width: 80%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .full-size-img select {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+  }
   .section-img {
+    width: 100%;
     left: 50%;
-    top: 41.5%;
     transform: translate(-50%,0);
   }
   .theater {
@@ -223,11 +282,13 @@ p {
   }
   .theater .section-img {
     left: 50%;
-    top: 41.5%;
     transform: translate(-50%,0);
   }
   .section-img img {
-    width: 300px;
+    position: relative;
+    max-width: 300px;
+    top: 0%;
+    bottom: 0px;
   }
   .small-text {
     display: none;
