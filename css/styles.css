@@ -3,6 +3,16 @@
   padding: 0;
   box-sizing: border-box;
   }
+h2, p {
+  color: #898989;
+}
+h2 {
+  font-weight: 300;
+}
+p {
+  font-size: 1.3em;
+  font-weight: 200;
+}
 .navbar{
   background-color: #FFF;
   padding: 1% 2% 0 2%;
@@ -85,12 +95,16 @@
   background: #FFF;
   color: #8C8C8C;
   border-radius: 10px;
+  font-size: 1.2em;
+  padding: 10px 20px 10px 20px;
+  font-weight: bold;
 }
 .gingerbread-text {
   position: absolute;
-  top: 40%;
+  top: 30%;
   left: 20%;
 }
+
 .gingerbread-img {
   position: absolute;
   top: 0%;
@@ -102,10 +116,30 @@
 .attractions {
   position: relative;
   top: 90%;
+  height: 420px;
   background: #EFEFEF;
 }
 .attractions-text {
   position: absolute;
-  top: 50%;
-  left: 50%;
+  top: 20%;
+  left: 20%;
+  text-align: center;
+}
+.attractions-small-text {
+  position: absolute;
+  bottom: 8%;
+  left: 32%;
+  text-align: right;
+}
+.attractions-small-text p {
+  font-size: 1em;
+}
+.attractions-img {
+  position: absolute;
+  top: 0%;
+  right: 10%;
+  text-align: center;
+}
+.attractions a {
+  color: #E4002B;
 }
