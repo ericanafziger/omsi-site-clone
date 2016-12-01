@@ -13,10 +13,18 @@ p {
   font-size: 1.3em;
   font-weight: 200;
 }
+a {
+  cursor: pointer;
+}
 .fixed {
   position: fixed;
   width: 100%;
   z-index: 100;
+}
+.max-width-nav {
+  max-width: 1084px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .nav a {
   color: #898989;
@@ -45,7 +53,9 @@ p {
   margin-bottom: 0;
   height: 100px;
   background-color: #FFF;
-  padding: 1% 2% 0 2%;
+  padding: 1% 5% 0 5%;
+  border-radius: 0;
+  opacity: 0.95;
 }
 .navbar-brand {
   z-index: 100;
@@ -250,6 +260,22 @@ p {
 .space h2, .space p  {
   color: #fff;
 }
+.footer {
+  background-color: #353535;
+  height: 540px;
+  color: #FFF;
+  width: 100%;
+  padding: 5% 10%;
+}
+.footer li {
+  list-style: none;
+  white-space: nowrap;
+  text-align: left;
+}
+.footer li:not(first-child) {
+  font-weight: 200;
+}
+
 @media screen and (max-width: 992px) {
   .max-width {
     position: static;
@@ -314,5 +340,13 @@ p {
   .small-text {
     display: none;
   }
-
+  .space .text {
+    width: 100%;
+  }
+}
+@media screen and (max-width:768px) {
+  .align-right {
+    position: absolute;
+    left: 40%;
+  }
 }
